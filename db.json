@@ -1,28 +1,12 @@
 {
   "users": [
     {
-      "id": "8A",
-      "title": "Fundamentos de Programación",
-      "startRecur": "2022-01-01",
-      "endRecur": "2022-12-31",
-      "daysOfWeek": [
-        1,
-        3
-      ],
-      "startTime": "8:00:00",
-      "endTime": "10:00:00"
-    },
-    {
-      "id": "8A",
-      "title": "Matemáticas",
-      "startRecur": "2022-01-01",
-      "endRecur": "2022-12-31",
-      "daysOfWeek": [
-        2,
-        4
-      ],
-      "startTime": "8:00:00",
-      "endTime": "10:00:00"
+      "id": "1",
+      "nombre": "Diego",
+      "telefono": "233747757",
+      "fechaNacimiento": "2022-12-31",
+      "direccion": "Calle falsa 123",
+      "email": "correo@correo.com"
     }
   ]
   
