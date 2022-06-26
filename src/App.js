@@ -1,12 +1,17 @@
-
 import './App.css';
-import Prueba from './components/Prueba';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Prueba from './components/Header';
+import NewContact from './components/NewContact';
 
 function App() {
   return (
-    <div className="App">
-      < Prueba />
-    </div>
+    <BrowserRouter>
+     <Routes>
+     <Route path="/" element={<Prueba />} />
+     <Route path="/contacto/nuevo" element={<NewContact />} />
+     </Routes>
+    
+    </BrowserRouter>
   );
 }
 
