@@ -7,16 +7,16 @@ const Layout = () => {
     const urlActual = location.pathname
 
     return (
-        <div className="md:flex md:min-h-screen">
+        <div className="md:flex md:min-h-screen bg-gray-100">
             <div className="md:w-1/4 bg-blue-900 px-5 py-10">
                 <h2 className="text-3xl font-black text-center text-white ">AGENDA - Contactos</h2>
                 <nav className="mt-10">
                     <Link 
-                        className={`${urlActual === '/clientes' ? 'text-blue-300' : 'text-white'} text-2xl block mt-2 hover:text-blue-300`}
+                        className={`${urlActual === '/' ? 'text-blue-300' : 'text-white'} text-2xl block mt-2 hover:text-blue-300`}
                         to="/"
                     >Contactos</Link>
                     <Link 
-                         className={`${urlActual === '/clientes/nuevo' ? 'text-blue-300' : 'text-white'} text-2xl block mt-2 hover:text-blue-300`}
+                         className={`${urlActual === '/contactos/nuevo' ? 'text-blue-300' : 'text-white'} text-2xl block mt-2 hover:text-blue-300`}
                         to="/contactos/nuevo"
                     >Nuevo Contacto</Link>
                 </nav>
