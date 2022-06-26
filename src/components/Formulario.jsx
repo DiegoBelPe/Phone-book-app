@@ -1,12 +1,55 @@
 import React from 'react'
-import { Formik, Form, Field} from 'formik'
+import { Formik, Form, Field } from 'formik'
+import * as Yup from 'yup'
+import Alerta from './Alerta'
 
 const Formulario = () => {
+  const nuevoContactoShema = Yup.object().shape({
+    nombre: Yup.string()
+               .min(3, 'El nombre es muy corto')
+               .max(20, 'El nombre es muy largo')
+               .required('El nombre es requerido'),
+    telefono: Yup.number()
+                 .positive('El teléfono no es valido')
+                 .integer('El teléfono debe ser un número entero')
+                 .typeError('El teléfono debe ser un número')
+                 .required('El teléfono es requerido'),
+    fechaNacimiento: Yup.date()
+                        .required('La fecha de nacimiento es requerida'),
+    direccion: Yup.string()
+                  .required('La dirección es requerida'),
+    email: Yup.string()
+              .email('El email no es válido')
+              .required('El email es requerido'),
+   
+  })
+  const handleSubmit = (value) => {
+    console.log(value)
+
+
+  }
   return (
     <div className="bg-white mt-10 px-5 py-10 rounded-md shadow-md 
     md:w-3/4 mx-auto">
       <h1 className='text-gray-600 font-bold text-xl uppercase text-center'> Agregar Contacto</h1>
-      <Formik>
+      <Formik
+        initialValues={{
+          nombre: '',
+          telefono: '',
+          fechaNacimiento: '',
+          direccion: '',
+          email: '',
+        }}
+        onSubmit={(values) => {
+          handleSubmit(values)
+          
+        }}
+        validationSchema={nuevoContactoShema}
+      
+      >
+        {({errors, touched}) => {
+          console.log(errors)
+          return (
         <Form>
           <div className='mb-4'>
             <label
@@ -18,7 +61,11 @@ const Formulario = () => {
               type="text"
               className="mt-2 w-full p-3 bg-gray-50"
               placeholder="Nombre de contacto"
+              name="nombre"
             />
+            {errors.nombre && touched.nombre ? (
+              <Alerta>{errors.nombre}</Alerta> 
+            ): null}
           </div>
           <div className='mb-4'>
             <label
@@ -30,7 +77,11 @@ const Formulario = () => {
               type="number"
               className="mt-2 w-full p-3 bg-gray-50"
               placeholder="Numero de contacto"
+              name="telefono"
             />
+            {errors.telefono && touched.telefono ? (
+              <Alerta>{errors.telefono}</Alerta> 
+            ): null}
           </div>
           <div className='mb-4'>
             <label
@@ -41,7 +92,11 @@ const Formulario = () => {
               id="fechaNacimiento"
               type="date"
               className="mt-2 w-full p-3 bg-gray-50"
+              name="fechaNacimiento"
             />
+            {errors.fechaNacimiento && touched.fechaNacimiento ? (
+              <Alerta>{errors.fechaNacimiento}</Alerta> 
+            ): null}
           </div>
           <div className='mb-4'>
             <label
@@ -52,7 +107,12 @@ const Formulario = () => {
               id="direcccion"
               type="text"
               className="mt-2 w-full p-3 bg-gray-50"
+              placeholder="Direccion de contacto"
+              name="direccion"
             />
+            {errors.direccion && touched.direccion ? (
+              <Alerta>{errors.direccion}</Alerta> 
+            ): null}
           </div>
           <div className='mb-4'>
             <label
@@ -63,7 +123,12 @@ const Formulario = () => {
               id="email"
               type="email"
               className="mt-2 w-full p-3 bg-gray-50"
+              placeholder="Correo electronico"
+              name="email"
             />
+            {errors.email && touched.email ? (
+              <Alerta>{errors.email}</Alerta> 
+            ): null}
           </div>
           <input 
           type="submit" 
@@ -72,7 +137,7 @@ const Formulario = () => {
           />
 
         </Form>
-
+        )}}
       </Formik>
     </div>
   )
