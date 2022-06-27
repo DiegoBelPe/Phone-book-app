@@ -23,6 +23,12 @@ const VerContact = () => {
     }
     fetchData()
   }, [])
+  const calcularEdad = (fechaNacimiento) => {
+    const hoy = new Date()
+    const cumpleanos = new Date(fechaNacimiento)
+    const edad = hoy.getFullYear() - cumpleanos.getFullYear()
+    return edad
+  }
   return (
     loading ? <Spinner /> : 
       Object.keys(contact).length === 0 ? 
@@ -38,7 +44,7 @@ const VerContact = () => {
             <span className='font-bold text-gray-700 uppercase'>Telefono:</span> {contact.telefono}
           </p>
           <p className='text-2xl text-gray-600 mt-4 '>
-            <span className='font-bold text-gray-700 uppercase'>Edad:</span> {contact.fechaNacimiento}
+            <span className='font-bold text-gray-700 uppercase'>Edad:</span> {calcularEdad(contact.fechaNacimiento)} años
           </p>
           <p className='text-2xl text-gray-600 mt-4 '>
             <span className='font-bold text-gray-700 uppercase'>Direccion:</span> {contact.direccion}

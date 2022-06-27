@@ -15,6 +15,14 @@
       "direccion": "calle falsa n 11 -23",
       "email": "julian@correo.com",
       "id": 3
+    },
+    {
+      "nombre": "DiegoB",
+      "telefono": 434355666,
+      "fechaNacimiento": "1985-10-26",
+      "direccion": "calle falsa n 11 -45",
+      "email": "dbeltranpereira@gmail.com",
+      "id": 4
     }
   ]
 }
