@@ -1,22 +1,6 @@
 {
   "contacts": [
     {
-      "nombre": "Diego",
-      "telefono": "233747757",
-      "fechaNacimiento": "2022-12-31",
-      "direccion": "Calle falsa 123",
-      "email": "correo@correo.com",
-      "id": 1
-    },
-    {
-      "nombre": "Julian Beltran ",
-      "telefono": 3457789000,
-      "fechaNacimiento": "2013-06-24",
-      "direccion": "calle falsa n 11 -23",
-      "email": "julian@correo.com",
-      "id": 3
-    },
-    {
       "nombre": "DiegoB",
       "telefono": 434355666,
       "fechaNacimiento": "1985-10-26",
@@ -31,6 +15,30 @@
       "direccion": "Av siempre viva",
       "email": "julianB@prueba.com",
       "id": 5
+    },
+    {
+      "nombre": "Mafe",
+      "telefono": 4567887787,
+      "fechaNacimiento": "1982-08-26",
+      "direccion": "calle falsa n 11 -26",
+      "email": "mafepg1982@gmail.com",
+      "id": 6
+    },
+    {
+      "nombre": "Pedro Perez",
+      "telefono": 32456788,
+      "fechaNacimiento": "1976-02-27",
+      "direccion": "Bogota-Colombia",
+      "email": "pedroperez@gmail.com",
+      "id": 7
+    },
+    {
+      "nombre": "Ligia Pelaez",
+      "telefono": 34567898,
+      "fechaNacimiento": "1967-10-27",
+      "direccion": "cll 43 n 22a - 60 ",
+      "email": "ligia@hotmail.com",
+      "id": 8
     }
   ]
 }
