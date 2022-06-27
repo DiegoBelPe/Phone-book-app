@@ -1,9 +1,13 @@
 import React from 'react'
 import { Formik, Form, Field } from 'formik'
+import { useNavigate } from 'react-router-dom'
 import * as Yup from 'yup'
 import Alerta from './Alerta'
+import { createContact }from '../services/contact'
 
 const Formulario = () => {
+  const navigate = useNavigate()
+
   const nuevoContactoShema = Yup.object().shape({
     nombre: Yup.string()
                .min(3, 'El nombre es muy corto')
@@ -23,10 +27,13 @@ const Formulario = () => {
               .required('El email es requerido'),
    
   })
-  const handleSubmit = (value) => {
-    console.log(value)
-
-
+  const handleSubmit = async (value) => {
+    try {
+      await createContact(value)
+      navigate('/')
+    } catch (error) {
+      console.log(error);
+    }
   }
   return (
     <div className="bg-white mt-10 px-5 py-10 rounded-md shadow-md 
@@ -40,8 +47,10 @@ const Formulario = () => {
           direccion: '',
           email: '',
         }}
-        onSubmit={(values) => {
-          handleSubmit(values)
+        onSubmit={async (values, {resetForm}) => {
+          await handleSubmit(values)
+
+          resetForm()
           
         }}
         validationSchema={nuevoContactoShema}
