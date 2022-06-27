@@ -23,6 +23,14 @@
       "direccion": "calle falsa n 11 -45",
       "email": "dbeltranpereira@gmail.com",
       "id": 4
+    },
+    {
+      "nombre": "Andres Julian ",
+      "telefono": 320566850048,
+      "fechaNacimiento": "2013-06-24",
+      "direccion": "Av siempre viva",
+      "email": "julianB@prueba.com",
+      "id": 5
     }
   ]
 }
