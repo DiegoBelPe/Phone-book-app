@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# Phone-book App 👨‍💻 🚀
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Weather forecast](https://repository-images.githubusercontent.com/220337868/a271d180-33ca-11ea-9a3a-4b4a7c15f44a)](https://www.mauriciorobayo.com/weather-app)
 
-## Available Scripts
+[![Build Status](https://github.com/MauricioRobayo/weather-app/workflows/Build%20and%20Deploy/badge.svg)](https://github.com/MauricioRobayo/weather-app/actions)
+[![codebeat badge](https://codebeat.co/badges/5d39d456-555b-44f4-a66c-046967635c6d)](https://codebeat.co/projects/github-com-mauriciorobayo-weather-app-master)
 
-In the project directory, you can run:
+Aplicacion de agenda telefonica en donde se puede crear, ver, actualizar y eliminar un contacto, ademas de ampliar su busqueda especifica por medio de filtros el cual se puede hacer por nombre y correo del contacto.
 
-### `npm start`
+![Image text](assets/agregarContacto.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Desarrollado con
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- REACT
+- REACT-ROUTER-DOM
+- TAILWINDCSS
+- FORMIK
+- YUP
+- JSON-SERVER
+- [API Key Proxy Server](https://github.com/MauricioRobayo/api-key-proxy-server)
 
-### `npm test`
+No frameworks were harmed in the making of this project.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Live Demo
 
-### `npm run build`
+https://www.mauriciorobayo.com/weather-app
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To get a local copy up and running follow this steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository and `cd` into it
 
-### `npm run eject`
+```sh
+git clone https://github.com/MauricioRobayo/weather-app
+cd weather-app
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Install dependencies
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```sh
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Start the `webpack-dev-server`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```sh
+npm run start
+```
 
-## Learn More
+4. To build the site for production
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```sh
+npm run build
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The production site is automatically deployed to GitHub pages using [GitHub Actions](./.github/workflows/main.yml).
 
-### Code Splitting
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Contributions, issues and feature requests are welcome!
 
-### Analyzing the Bundle Size
+## Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This project uses the [linkify-it](https://www.npmjs.com/package/linkify-it).
 
-### Making a Progressive Web App
+To be able to remove the API key from the front-end code, the project uses the [API Key Proxy Server](https://github.com/MauricioRobayo/api-key-proxy-server).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## License
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[MIT](LICENSE).
