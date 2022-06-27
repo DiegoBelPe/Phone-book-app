@@ -4,6 +4,7 @@ import Layout from './layout/Layout';
 import Inicio from './pages/Inicio';
 import NewContact from './pages/NewContact' 
 import EditContact from './pages/EditContact'; 
+import VerContact from './pages/VerContact';
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
                   <Route index element={<Inicio />} />
                   <Route path="contactos/nuevo" element={<NewContact />} />
                   <Route path="contactos/editar/:id" element={<EditContact />} />
-                  {/* <Route path=":id" element={<VerCliente />} /> */}
+                  <Route path=":id" element={<VerContact />} />
               </Route>
           </Routes>
       </BrowserRouter>
