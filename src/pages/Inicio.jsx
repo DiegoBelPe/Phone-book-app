@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { getContacts } from '../services/contact'
+import { getContacts, deleteContact } from '../services/contact'
 import Contacto from '../components/Contacto'
 
 const Inicio = () => {
@@ -17,6 +17,19 @@ const Inicio = () => {
     }
     fetchData()
   }, [])
+
+  const handleDelete = async (id) => {
+    const confirmar = confirm('¿Estás seguro de eliminar este contacto?')
+    if(confirmar) {
+      try {
+        await deleteContact(id)
+        setContacts(contacts.filter(contact => contact.id !== id))
+      } catch (error) {
+        console.log(error)
+        
+      }
+    }
+  }
 
   return (
     <>
@@ -39,6 +52,7 @@ const Inicio = () => {
             <Contacto
                key={contact.id} 
                contacto={contact}
+               handleDelete={handleDelete}
             />
           ))}
 

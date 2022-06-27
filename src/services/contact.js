@@ -27,19 +27,6 @@ export async function createContact(contact) {
   return data;
 }
 
-export async function updateContact(contact) {
-  const response = await fetch(`${BASE_URL}/contacts/${contact.id}`, {
-    method: 'PATCH',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(contact)
-  });
-  const data = await response.json();
-  console.log(data);
-  return data;
-}
-
 export async function deleteContact(id) {
   const response = await fetch(`${BASE_URL}/contacts/${id}`, {
     method: 'DELETE'

@@ -1,20 +1,12 @@
 {
   "contacts": [
     {
-      "id": 1,
       "nombre": "Diego",
       "telefono": "233747757",
       "fechaNacimiento": "2022-12-31",
       "direccion": "Calle falsa 123",
-      "email": "correo@correo.com"
-    },
-    {
-      "nombre": "Andres",
-      "telefono": 23848855,
-      "fechaNacimiento": "1992-07-26",
-      "direccion": "calle falsa n 11 -2",
-      "email": "dbeltranpereira@gmail.com",
-      "id": 2
+      "email": "correo@correo.com",
+      "id": 1
     },
     {
       "nombre": "Julian Beltran ",
@@ -23,14 +15,6 @@
       "direccion": "calle falsa n 11 -23",
       "email": "julian@correo.com",
       "id": 3
-    },
-    {
-      "nombre": "gato",
-      "telefono": 565656565,
-      "fechaNacimiento": "2022-06-26",
-      "direccion": "Cll 15 N 7C 11ewe",
-      "email": "ligiapelaez@hotmail.com",
-      "id": 4
     }
   ]
 }

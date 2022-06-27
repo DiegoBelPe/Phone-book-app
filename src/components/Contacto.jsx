@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import { useNavigate } from 'react-router-dom'
 import PropTypes  from 'prop-types'
 
-const Contacto = ({contacto}) => {
+const Contacto = ({contacto, handleDelete}) => {
   const navigate = useNavigate()
   const { nombre, telefono, fechaNacimiento, direccion, email, id } = contacto
   return (
@@ -19,17 +20,19 @@ const Contacto = ({contacto}) => {
           className='bg-yellow-500 hover:bg-yellow-600 block w-full text-white p-2 uppercase font-bold text-xs rounded-md'
           onClick={() => navigate(`/${id}`)}
         >
-          Editar
+          Ver
         </button>
         <button
           type='button'
           className='bg-blue-600 hover:bg-blue-700 block w-full text-white p-2 uppercase font-bold text-xs rounded-md mt-3'
+          onClick={() => navigate(`/contactos/editar/${id}`)}
         >
           Editar
         </button>
         <button
           type='button'
           className='bg-red-600 hover:bg-red-700 block w-full text-white p-2 uppercase font-bold text-xs rounded-md mt-3'
+          onClick={() => handleDelete(id)}
         >
           Eliminar
         </button>
