@@ -44,6 +44,6 @@ npm run dev
 
 
 
-Disfruta este proyecto y cuentame que tu opiniion 🤩
+Disfruta este proyecto y cuentame tu opiniion 🤩
 
 
