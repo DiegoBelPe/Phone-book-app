@@ -3,7 +3,7 @@ import React from 'react'
 import { Formik, Form, Field } from 'formik'
 import { useNavigate } from 'react-router-dom'
 import * as Yup from 'yup'
-import Alerta from './Alerta'
+import Alert from './Alert'
 import Spinner from './Spinner'
 
 const Formulario = ({contact, loading}) => {
@@ -100,7 +100,7 @@ const Formulario = ({contact, loading}) => {
                 name="nombre"
               />
               {errors.nombre && touched.nombre ? (
-                <Alerta>{errors.nombre}</Alerta> 
+                <Alert>{errors.nombre}</Alert> 
               ): null}
             </div>
             <div className='mb-4'>
@@ -116,7 +116,7 @@ const Formulario = ({contact, loading}) => {
                 name="telefono"
               />
               {errors.telefono && touched.telefono ? (
-                <Alerta>{errors.telefono}</Alerta> 
+                <Alert>{errors.telefono}</Alert> 
               ): null}
             </div>
             <div className='mb-4'>
@@ -131,7 +131,7 @@ const Formulario = ({contact, loading}) => {
                 name="fechaNacimiento"
               />
               {errors.fechaNacimiento && touched.fechaNacimiento ? (
-                <Alerta>{errors.fechaNacimiento}</Alerta> 
+                <Alert>{errors.fechaNacimiento}</Alert> 
               ): null}
             </div>
             <div className='mb-4'>
@@ -147,7 +147,7 @@ const Formulario = ({contact, loading}) => {
                 name="direccion"
               />
               {errors.direccion && touched.direccion ? (
-                <Alerta>{errors.direccion}</Alerta> 
+                <Alert>{errors.direccion}</Alert> 
               ): null}
             </div>
             <div className='mb-4'>
@@ -163,7 +163,7 @@ const Formulario = ({contact, loading}) => {
                 name="email"
               />
               {errors.email && touched.email ? (
-                <Alerta>{errors.email}</Alerta> 
+                <Alert>{errors.email}</Alert> 
               ): null}
             </div>
             <input 

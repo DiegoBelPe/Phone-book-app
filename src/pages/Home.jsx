@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { getContacts, deleteContact } from '../services/contact'
-import Contacto from '../components/Contacto'
+import Contact from '../components/Contact'
 
 const Inicio = () => {
   // eslint-disable-next-line no-unused-vars
@@ -74,7 +74,7 @@ const Inicio = () => {
         </thead>
         <tbody>
           {results.map(contact => (
-            <Contacto
+            <Contact
                key={contact.id} 
                contacto={contact}
                handleDelete={handleDelete}
